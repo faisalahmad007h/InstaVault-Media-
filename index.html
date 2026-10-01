@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="InstaVault — save public Instagram media with a premium experience."
+  />
+
+  <title>InstaVault — Media Downloader</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <script src="server.js"></script>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <!-- SPARK CONTAINER -->
+  <div id="sparkContainer"></div>
+
+  <!-- HEADER -->
+  <header class="navbar glass">
+    <div class="brand">
+      <div class="brand-icon">
+        ↓
+      </div>
+
+      <div>
+        <h1>InstaVault</h1>
+        <span>Public Media Downloader</span>
+      </div>
+    </div>
+
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      FAST • PRIVATE • SIMPLE
+    </div>
+  </header>
+
+
+  <!-- MAIN -->
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="mini-label">
+          <span>✦</span>
+          NEXT-GEN MEDIA TOOL
+        </div>
+
+        <h2>
+          Save your favorite
+          <span>public media.</span>
+        </h2>
+
+        <p>
+          Paste a supported public Instagram link and get
+          your available media in seconds.
+        </p>
+
+      </div>
+
+
+      <!-- DOWNLOAD CARD -->
+      <div class="download-card glass">
+
+        <div class="input-header">
+          <span>Instagram URL</span>
+          <button id="pasteBtn" class="paste-btn">
+            Paste
+          </button>
+        </div>
+
+        <div class="url-box">
+
+          <div class="link-icon">
+            🔗
+          </div>
+
+          <input
+            id="urlInput"
+            type="url"
+            placeholder="Paste Instagram link here…"
+            autocomplete="off"
+          />
+
+          <button id="clearBtn" class="clear-btn">
+            ×
+          </button>
+
+        </div>
+
+        <button id="downloadBtn" class="download-btn">
+
+          <span class="btn-icon">↓</span>
+
+          <span id="downloadText">
+            Download
+          </span>
+
+          <span class="btn-shine"></span>
+
+        </button>
+
+        <div id="message" class="message"></div>
+
+      </div>
+
+
+      <!-- PREVIEW -->
+      <section id="previewSection" class="preview-section hidden">
+
+        <div class="section-title">
+          <span>Media Preview</span>
+          <small id="mediaCount"></small>
+        </div>
+
+        <div id="mediaGrid" class="media-grid"></div>
+
+        <div id="qualityArea" class="quality-area hidden">
+
+          <label for="quality">
+            Quality
+          </label>
+
+          <select id="quality">
+            <option value="original">
+              Original / Best Available
+            </option>
+
+            <option value="high">
+              High
+            </option>
+
+            <option value="medium">
+              Medium
+            </option>
+
+            <option value="low">
+              Data Saver
+            </option>
+          </select>
+
+        </div>
+
+        <button id="downloadAllBtn" class="secondary-download hidden">
+          ↓ Download All
+        </button>
+
+      </section>
+
+
+      <!-- FEATURES -->
+      <section class="features">
+
+        <div class="feature glass">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast</h3>
+          <p>Clean and responsive download experience.</p>
+        </div>
+
+        <div class="feature glass">
+          <div class="feature-icon">◇</div>
+          <h3>Original</h3>
+          <p>No InstaVault watermark or unnecessary modification.</p>
+        </div>
+
+        <div class="feature glass">
+          <div class="feature-icon">⌁</div>
+          <h3>Simple</h3>
+          <p>Paste a supported public link and get started.</p>
+        </div>
+
+      </section>
+
+    </section>
+
+
+    <!-- HISTORY -->
+    <section class="history-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="mini-label">YOUR LIBRARY</span>
+          <h2>Recent Downloads</h2>
+        </div>
+
+        <button id="clearHistoryBtn" class="ghost-btn">
+          Clear
+        </button>
+
+      </div>
+
+      <div id="historyGrid" class="history-grid">
+        <div class="empty-state glass">
+          <div>↓</div>
+          <h3>Nothing downloaded yet</h3>
+          <p>
+            Paste a supported Instagram link above to get started.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      InstaVault is an independent utility.
+    </p>
+
+    <p>
+      Users are responsible for ensuring they have the rights
+      and permissions required to download and use content.
+    </p>
+
+  </footer>
+
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+```
